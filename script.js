@@ -22,9 +22,14 @@ function playerPlay(){
     return selection
 };
 
+const rock = document.querySelector("#rockbtn");
+const paper = document.querySelector('#paperbtn');
+const scissors = document.querySelector('#scissorsbtn');
+
+
+
 // main function. 
 function playRound(playerSelection,computerSelection){
-
 
     console.log(`Player 1 choses ${playerSelection} while computer chooses ${computerSelection}`);
 
@@ -38,9 +43,12 @@ function playRound(playerSelection,computerSelection){
     };
 };
 
+rock.addEventListener('click', () =>{
+    playRound('rock', computerPlay())});
 
+paper.addEventListener('click', () =>{
+    playRound('paper', computerPlay())});
 
-
-
-
-
+scissors.addEventListener('click', () =>{
+    playRound('scissors', computerPlay())});
+    
