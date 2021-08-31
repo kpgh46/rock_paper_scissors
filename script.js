@@ -34,8 +34,6 @@ let c = 0;
 
 function playRound(playerSelection,computerSelection){
 
-    console.log(`Player 1 choses ${playerSelection} while computer chooses ${computerSelection}`);
-
     while (p < 5 || c < 5){
 
     if(playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper"){
@@ -43,10 +41,11 @@ function playRound(playerSelection,computerSelection){
         p+=1;
         console.log(`Player 1 has a score of ${p}`);
         playerScore.textContent = `${p}`;
-        if (p === 5){
-            playerScore.textContent = `That is ${p} wins.  PLAYER 1 is VICTORIOUS!`
-        }
-        break;
+
+            if (p === 5){
+                playerScore.textContent = `That is ${p} wins.  PLAYER 1 is VICTORIOUS!`
+            }
+            break;
   
     } else if (playerSelection === computerSelection){
         document.getElementById("result").innerHTML="It is a tie!";
@@ -58,9 +57,10 @@ function playRound(playerSelection,computerSelection){
         c+=1;
         console.log(`Computer has a score of ${c}`);
         computerScore.textContent = `${c}`;
-        if (c === 5){
-        computerScore.textContent = `That is ${c} wins.  PLAYER 1 is VICTORIOUS!`};
-        break;
+
+            if (c === 5){
+            computerScore.textContent = `That is ${c} wins.  Computer 1 is VICTORIOUS!`};
+            break;
     };
 }
 };
